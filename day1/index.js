@@ -1,8 +1,8 @@
 // setup to access input data file
-const fs = require('fs');
-const path = require('path');
+import { readFileSync } from 'fs';
+import { join } from 'path';
 // import data from input.txt as string
-const input = fs.readFileSync(path.join(__dirname, './input.txt'), 'utf8');
+const input = readFileSync(join(__dirname, './input.txt'), 'utf8');
 // conver each string item to number
 const inputArr = input.split('\n').map(Number);
 
